@@ -153,10 +153,10 @@ button { font-family: inherit; }
   display: flex; align-items: center;
 }
 .nav-logo-img {
-  height: 26px;
+  height: 21px;
   width: auto;
 }
-@media (max-width: 720px) { .nav-logo-img { height: 22px; } }
+@media (max-width: 720px) { .nav-logo-img { height: 18px; } }
 .nav-logo .mark {
   width: 24px; height: 24px;
   display: grid; place-items: center;

@@ -29,9 +29,9 @@ const COPY = {
     h1Accent: "Robôs de Vendas",
     sub: "Uma equipe de multiagentes de IA capazes de executar o trabalho do seu time comercial. Substituem o vendedor pouco requisitado ou atuam como copiloto, agendando tarefas, enviando WhatsApp ou emails e atualizando tudo diretamente no seu CRM.",
     stats: [
-      { n: "3×", l: "Produtividade do SDR" },
-      { n: "54", l: "Toques por lead" },
-      { n: "+20%", l: "Conversão do closer" },
+      { n: "+300%", l: "Aumento nas reuniões" },
+      { n: "+30%", l: "Aumento nas vendas" },
+      { n: "+1.000", l: "Mensagens por dia" },
     ],
     problem: {
       kicker: "POR QUE AGORA",
@@ -52,7 +52,7 @@ const COPY = {
     canvas: {
       kicker: "SALES CANVAS VOLUM",
       h2: "O que o humano fazia. O que o robô faz agora.",
-      lead: "Cada etapa do funil tem um par humano + robô. Você decide o quanto delegar — e quando o vendedor entra em cena.",
+      lead: "Os robôs automatizam 100% da sua prospecção por whatsapp e email. Enviam propostas, confirmam reuniões, fazem follow up e até negociam. Seu vendedor apenas vai ligar e entrar nas reuniões marcadas.",
     },
     planos: {
       kicker: "PLANOS E VALORES",
@@ -60,15 +60,15 @@ const COPY = {
       lead: "",
     },
     integ: {
-      kicker: "INTEGRAÇÕES",
+      kicker: "MAIS DE 25 CRMs INTEGRADOS",
       h2: "Conecta no que seu time já usa.",
       lead: "Os robôs falam com seu CRM, WhatsApp, email e calendar. E novos conectores chegam todo mês.",
     },
     faq: [
       { q: "Os Robôs vieram para substituir os vendedores humanos?", a: "Definitivamente não. A partir do Robô 2.0 já é possível substituir um SDR meio preguiçoso que não faz ligações 😅 — mas a proposta é manter o relacionamento humano vivo. O robô faz a parte chata, o humano faz o relacionamento." },
-      { q: "Em quanto tempo o robô entra em produção?", a: "O setup leva, em média, 14 dias úteis a partir da assinatura. Inclui mapeamento da cadência, integração com seu CRM/WhatsApp/email e treinamento do modelo nos seus scripts." },
-      { q: "Funciona com meu CRM?", a: "Hoje conectamos nativamente com os CRMs mais populares do mercado B2B brasileiro, além de WhatsApp Business, Google Workspace e ferramentas de email. Novos conectores entram a cada release." },
-      { q: "E quanto à segurança dos dados dos leads?", a: "Todas as conversas e dados são processados em ambientes em conformidade com a LGPD. Conversas ficam armazenadas no seu CRM — você é dono dos dados." },
+      { q: "Em quanto tempo o robô entra em produção?", a: "O setup leva, em média, 7 dias a partir da assinatura. Inclui mapeamento da cadência, integração com seu CRM/WhatsApp/email e treinamento do modelo nos seus scripts." },
+      { q: "Funciona com meu CRM?", a: "Hoje conectamos nativamente com os CRMs mais populares do mercado B2B brasileiro, além de WhatsApp Business, Google Workspace e ferramentas de email. Todo mês lançamos novas integrações. Caso seu CRM não esteja na lista, podemos produzir sob demanda caso seu CRM tenha API aberta." },
+      { q: "E quanto à segurança dos dados dos leads?", a: "Todas as conversas e dados são processados em ambientes em conformidade com a LGPD. Todas as conversas são armazenadas diretamente no seu CRM pelos nossos robôs. As informações estão sempre seguras e ao seu alcance." },
     ],
     ctaH2: "Veja seu funil rodando com IA.",
     ctaSub: "Agende uma demonstração gratuita de 30 minutos. Mostramos o robô conversando com leads reais e simulamos o impacto no seu pipeline.",
@@ -83,9 +83,9 @@ const COPY = {
     h1Accent: "Robôs de Vendas",
     sub: "Uma equipe de multiagentes de IA capazes de executar o trabalho do seu time comercial. Substituem o vendedor pouco requisitado ou atuam como copiloto, agendando tarefas, enviando WhatsApp ou emails e atualizando tudo diretamente no seu CRM.",
     stats: [
-      { n: "3×", l: "Mais produtividade" },
-      { n: "54", l: "Toques por lead" },
-      { n: "+20%", l: "Closer vendendo" },
+      { n: "+300%", l: "Aumento nas reuniões" },
+      { n: "+30%", l: "Aumento nas vendas" },
+      { n: "+1.000", l: "Mensagens por dia" },
     ],
     problem: {
       kicker: "POR QUE AGORA",
@@ -114,7 +114,7 @@ const COPY = {
       lead: "",
     },
     integ: {
-      kicker: "INTEGRAÇÕES",
+      kicker: "MAIS DE 25 CRMs INTEGRADOS",
       h2: "Pluga no que seu time já usa.",
       lead: "Os robôs falam com CRM, WhatsApp, e-mail e calendar. E a gente solta conector novo todo mês.",
     },
@@ -201,10 +201,7 @@ function HeroVisual() {
         alt="Robô 2.0 conversando no WhatsApp"
         className="mockup-img"
       />
-      <div className="hero-visual-foot">
-        <span className="live">CONVERSA AO VIVO</span>
-        <span>WHATSAPP · CRM SINCRONIZADO</span>
-      </div>
+      {/* hero-visual-foot removido */}
     </div>
   );
 }
@@ -324,7 +321,7 @@ function SalesCanvas({ copy }) {
     <section className="section" id="canvas">
       <div className="container">
         <div className="sect-head">
-          <span className="eyebrow"><span className="dot" />{copy.canvas.kicker}</span>
+          {/* eyebrow canvas removido */}
           <h2 className="h2">{copy.canvas.h2}</h2>
           <p className="lead">{copy.canvas.lead}</p>
         </div>
@@ -417,8 +414,6 @@ function Robos({ copy }) {
                 {r.bullets.map((b, j) => <li key={j}>{b}</li>)}
               </ul>
               <div className="robot-foot" data-pricing>
-                <div className="robot-price">{r.price}<small>/MÊS</small></div>
-                <div className="robot-setup">SETUP R$ 1.500</div>
               </div>
             </article>
           ))}
@@ -448,7 +443,6 @@ function Pricing({ copy, hidden }) {
             <thead>
               <tr style={{ borderBottom: "1px solid var(--line)" }}>
                 <th style={cellHead}>Plano</th>
-                <th style={cellHead}>Mensalidade</th>
                 <th style={cellHead}></th>
               </tr>
             </thead>
@@ -456,7 +450,6 @@ function Pricing({ copy, hidden }) {
               {plans.map((p, i) => (
                 <tr key={i} style={{ borderBottom: i < 2 ? "1px solid var(--line)" : "0" }}>
                   <td style={cell}><strong style={{ fontFamily: "var(--display)", fontSize: 18 }}>{p.name}</strong></td>
-                  <td style={cell}><span style={{ fontFamily: "var(--display)", fontSize: 22, fontWeight: 600 }}>{p.price}</span> <span style={{ fontFamily: "var(--mono)", fontSize: 11, color: "var(--fg-3)", letterSpacing: ".1em" }}>/MÊS</span></td>
                   <td style={{ ...cell, textAlign: "right" }}>
                     <a href="#cta" className="btn btn-ghost" style={{ padding: "9px 14px", fontSize: 13 }}>Quero esse</a>
                   </td>
@@ -473,8 +466,20 @@ const cellHead = { textAlign: "left", padding: "18px 24px", fontFamily: "var(--m
 const cell = { padding: "20px 24px", color: "var(--fg)" };
 
 function Integrations({ copy }) {
-  const now = ["WhatsApp", "Gmail", "Calendar", "HubSpot", "RD Station", "Pipedrive"];
-  const soon = ["Salesforce", "Outlook", "Slack", "Notion", "Asana", "Zoho"];
+  const all = [
+    { name: "WhatsApp",   logo: "uploads/whatsapp-logo.png" },
+    { name: "Gmail",      logo: "uploads/gmail-logo.png" },
+    { name: "Calendar",   logo: "uploads/calendar-logo.webp" },
+    { name: "HubSpot",    logo: "uploads/hubspot-logo.png" },
+    { name: "RD Station", logo: "uploads/rdstation-logo.jpeg" },
+    { name: "Pipedrive",  logo: "uploads/pipedrive-logo.png" },
+    { name: "Agendor",    logo: "uploads/agendor-logo.png" },
+    { name: "Bitrix",     logo: "uploads/bitrix-logo.jpeg" },
+    { name: "Leads2b",    logo: "uploads/leads2b-logo.webp" },
+    { name: "Odoo",       logo: "uploads/odoo-logo.png" },
+    { name: "Salesforce", logo: "uploads/salesforce-logo.png" },
+    { name: "Teams",      logo: "uploads/teams-logo.png" },
+  ];
   return (
     <section className="section" id="integracoes">
       <div className="container">
@@ -483,21 +488,11 @@ function Integrations({ copy }) {
           <h2 className="h2">{copy.integ.h2}</h2>
           <p className="lead">{copy.integ.lead}</p>
         </div>
-        <div className="label-mono" style={{ marginBottom: 8 }}>DISPONÍVEIS · PRO &amp; BASIC</div>
         <div className="integrations">
-          {now.map((n, i) => (
+          {all.map((n, i) => (
             <div className="intg-cell" key={i}>
-              <span className="glyph">{n[0]}</span>
-              {n.toUpperCase()}
-            </div>
-          ))}
-        </div>
-        <div className="label-mono" style={{ marginBottom: 8, marginTop: 32 }}>EM BREVE · ROADMAP</div>
-        <div className="integrations">
-          {soon.map((n, i) => (
-            <div className="intg-cell soon" key={i}>
-              <span className="glyph">{n[0]}</span>
-              {n.toUpperCase()}
+              <img src={n.logo} alt={n.name} style={{ width: 36, height: 36, objectFit: "contain", borderRadius: 8, background: "#fff", padding: 4 }} />
+              {n.name.toUpperCase()}
             </div>
           ))}
         </div>
@@ -512,7 +507,7 @@ function FAQ({ copy }) {
     <section className="section" id="faq">
       <div className="container">
         <div className="sect-head">
-          <span className="eyebrow"><span className="dot" />PERGUNTAS &amp; RESPOSTAS</span>
+          {/* eyebrow FAQ removido */}
           <h2 className="h2">Dúvidas que sempre aparecem.</h2>
         </div>
         <div className="faq-wrap">
@@ -562,7 +557,7 @@ function Footer() {
     <footer className="footer">
       <div className="container footer-row">
         <div>© 2026 VOLUM · Aceleradora de vendas B2B</div>
-        <div>SALES BOTS v3.0 · BR · LGPD</div>
+        <img src="uploads/volum-logo.png" alt="VOLUM" style={{ height: 24, opacity: 0.6 }} />
       </div>
     </footer>
   );
@@ -597,14 +592,14 @@ function App() {
       <div className="atmosphere" aria-hidden="true" />
       <Nav copy={copy} cta={copy.cta} />
       <Hero copy={copy} heroStyle={t.heroStyle} accent={t.accent} />
-      <Marquee />
-      <Problem copy={copy} />
-      <Robos copy={copy} />
+      {/* <Marquee /> */}
       <SalesCanvas copy={copy} />
-      <Pricing copy={copy} hidden={!t.showPricing} />
+      <CTA copy={copy} />
+      {/* <Problem copy={copy} /> */}
+      <Robos copy={copy} />
+      {/* <Pricing copy={copy} hidden={!t.showPricing} /> */}
       <Integrations copy={copy} />
       <FAQ copy={copy} />
-      <CTA copy={copy} />
       <Footer />
 
       {/* Hide pricing footer rows in robot cards when global pricing is hidden */}
